@@ -94,14 +94,17 @@ class RailRoad
     if type_of_train == :passenger
       train = PassengerTrain.new(number_of_train)
       trains << train
+      puts "Поезд № #{number_of_train} успешно создан"
     elsif type_of_train == :cargo
       train = CargoTrain.new(number_of_train)
       trains << train
-      puts "Поезд № #{number_of_train} добавлен"
+      puts "Поезд № #{number_of_train} успешно создан"
     else
       puts "Вы ввели неправильный тип поезда"
     end
-    
+    rescue StandardError => e
+      puts "Допустимый формат: три буквы или цифры, необязательный дефис и еще 2 буквы или цифры после дефиса"
+      retry 
   end
 
   

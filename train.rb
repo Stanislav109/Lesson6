@@ -78,8 +78,8 @@ class Train
   protected 
 
   def validate!
-    raise puts "Number must be 5 simbols" if number.length < 5
-    raise puts "Number has invalid format" if number !~ NUMBER_FORMAT
+    raise "Number must be 5 simbols" if number.length < 5
+    raise "Number has invalid format" if number !~ NUMBER_FORMAT
   end
 
   def boost_speed(speed)

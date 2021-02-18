@@ -29,7 +29,7 @@ class Station
   protected
 
   def validate!
-    raise puts "Name can't be nill" if name == "" || name.nil?
+    raise "Name can't be nill" if name == "" || name.nil?
          
   end
 
