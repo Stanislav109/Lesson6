@@ -19,11 +19,11 @@ class Station
   end
 
   def valid?
-      validate!
-      true
-    rescue
-      false
-    end
+    validate!
+    true
+  rescue
+    false
+  end
 
   
   protected
